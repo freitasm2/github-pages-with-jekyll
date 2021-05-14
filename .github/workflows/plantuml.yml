@@ -11,7 +11,6 @@ jobs:
     name: plantuml
     steps:
       - name: Install Graphviz Dependency
-        run: |
         uses: ts-graphviz/setup-graphviz@v1
 
       - name: Checkout Repository

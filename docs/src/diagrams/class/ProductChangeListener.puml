@@ -8,14 +8,12 @@ markerViewConverter: MarketViewConverter
 marketProcessor: MarketProcessor
 }
 
-
 interface MarketViewUpdateListener{
 onMarketViewUpdates()
 }
 
 interface MarketProcessorPort{
 }
-
 
 MarketViewUpdateListener <|.. ProductChangeListener
 ValidatorEngine <--o ProductChangeListener

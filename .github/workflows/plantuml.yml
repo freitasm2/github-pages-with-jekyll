@@ -1,6 +1,8 @@
 name: Generate PlantUML Diagrams
 
 on: pull_request
+  paths:
+    - 'docs/**'
 
 jobs:
   generate_plantuml:
@@ -12,6 +14,8 @@ jobs:
           sudo apt-get install graphviz
       - name: Checkout Repository
         uses: actions/checkout@v2
+      - name: fetch from branch
+        run: git fetch origin ${{github.ref}}
       - name: Process Diagrams
         run: java -jar plantuml.jar -v -tsvg -r -o "${{github.workspace}}/docs/media" "docs/src/**.puml"
       - name: commit and push

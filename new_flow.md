@@ -11,6 +11,6 @@ The following diagram represents the FIM new flow High Level Architecture.
 
 ![High Level Architecture](media/ProductChangeListener.svg)
 
-
+![High Level Architecture](media/ProductChangeListener.png)
 
 

@@ -10,15 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     name: plantuml
     steps:
-      - name: Install Dependencies
+      - name: Install Graphviz Dependency
         run: |
-          sudo apt-get install graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: fetch from branch
-        run: git fetch origin ${{github.ref}}
+        with:
+          ref: ${{ github.head_ref }}
+
       - name: Process Diagrams
         run: java -jar plantuml.jar -v -tsvg -r -o "${{github.workspace}}/docs/media" "docs/src/**.puml"
+
       - name: commit and push
         uses: actions-x/commit@v2
         with:

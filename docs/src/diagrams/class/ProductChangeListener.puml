@@ -2,10 +2,6 @@
 
 title Product Change Flow Class Diagram
 
-!include Validators.puml
-!include Converter.puml
-!includesub Envelope.puml!envelope
-
 class ProductChangeListener{
 validatorEngine: ValidatorEngine
 markerViewConverter: MarketViewConverter

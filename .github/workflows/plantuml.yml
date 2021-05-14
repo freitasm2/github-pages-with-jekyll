@@ -1,8 +1,9 @@
 name: Generate PlantUML Diagrams
 
-on: pull_request
-  paths:
-    - 'docs/**'
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
 
 jobs:
   generate_plantuml:

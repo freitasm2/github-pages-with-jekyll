@@ -1,0 +1,29 @@
+@startuml
+
+title Product Change Flow Class Diagram
+
+!include Validators.puml
+!include Converter.puml
+!includesub Envelope.puml!envelope
+
+class ProductChangeListener{
+validatorEngine: ValidatorEngine
+markerViewConverter: MarketViewConverter
+marketProcessor: MarketProcessor
+}
+
+
+interface MarketViewUpdateListener{
+onMarketViewUpdates()
+}
+
+interface MarketProcessorPort{
+}
+
+
+MarketViewUpdateListener <|.. ProductChangeListener
+ValidatorEngine <--o ProductChangeListener
+MarketViewConverter <--o ProductChangeListener
+MarketProcessorPort <--o ProductChangeListener
+
+@enduml

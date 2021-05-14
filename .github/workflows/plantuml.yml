@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Process Diagrams
-        run: java -jar plantuml.jar -v -tsvg -r -o "${{github.ref}}/output" "docs/src/**.pu"
+        run: java -jar plantuml.jar -v -tsvg -r -o "${{github.ref}}/docs/media" "docs/src/**.pu"
       - name: commit and push
         uses: actions-x/commit@v2
         with:

@@ -1,0 +1,23 @@
+@startuml
+skinparam backgroundColor white
+
+title MarketChange
+
+class ProductChangeListener{
+validatorEngine: ValidatorEngine
+markerViewConverter: MarketViewConverter
+marketProcessor: MarketProcessor
+}
+
+interface MarketViewUpdateListener{
+onMarketViewUpdates()
+}
+
+MarketViewUpdateListener <|.. ProductChangeListener
+
+MarketViewConverter <--o ProductChangeListener
+MarketProcessorPort <--o ProductChangeListener
+Teste3 <--o Teste
+Teste <--o Teste2
+
+@enduml

@@ -9,8 +9,8 @@ This Section provides high level information on FIM's New Flow.
 ### FIM High Level Architecture  <a name="highLevelArchitecture"></a>
 The following diagram represents the FIM new flow High Level Architecture.
 
-![High Level Architecture](media/productchange.svg)
+![High Level Architecture](docs/media/productchange.svg)
 
-![High Level Architecture](media/productchange.png)
+![High Level Architecture](docs/media/productchange.png)
 
 

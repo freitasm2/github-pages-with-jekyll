@@ -30,7 +30,7 @@ jobs:
 
       - name: Move Diagrams
         run: |
-          mv -f docs/media/docs/src/* docs/media
+          cp -r docs/media/docs/src/* docs/media
           rm -rf docs/media/docs
 
       - name: Initialize mandatory git config

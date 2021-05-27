@@ -1,0 +1,25 @@
+@startuml
+
+title SEM BACKGROUND
+
+class SEMBACKGROUND{
+validatorEngine: ValidatorEngine
+markerViewConverter: MarketViewConverter
+marketProcessor: MarketProcessor
+}
+
+interface SEMBACKGROUND{
+onMarketViewUpdates()
+}
+
+interface SEMBACKGROUND{
+}
+
+MarketViewUpdateListener <|.. MarketChange
+ValidatorEngine <--o MarketChange
+MarketViewConverter <--o MarketChange
+MarketProcessorPort <--o MarketChange
+Ruben <--o Mauro
+Fabio <--o Marta
+
+@enduml

@@ -21,6 +21,8 @@ ValidatorEngine <--o ProductChangeListener
 MarketViewConverter <--o ProductChangeListener
 MarketProcessorPort <--o ProductChangeListener
 Teste <--o Teste
+Teste <--o Teste2
+
 
 
 @enduml

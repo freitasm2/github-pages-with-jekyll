@@ -1,0 +1,26 @@
+@startuml
+skinparam backgroundColor white
+
+title Market Change Flow Class Diagram
+
+class MarketChange{
+validatorEngine: ValidatorEngine
+markerViewConverter: MarketViewConverter
+marketProcessor: MarketProcessor
+}
+
+interface MarketViewUpdateListener{
+onMarketViewUpdates()
+}
+
+interface MarketProcessorPort{
+}
+
+MarketViewUpdateListener <|.. MarketChange
+ValidatorEngine <--o MarketChange
+MarketViewConverter <--o MarketChange
+MarketProcessorPort <--o MarketChange
+Ruben <--o Mauro
+Fabio <--o Marta
+
+@enduml

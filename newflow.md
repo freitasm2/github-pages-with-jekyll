@@ -11,6 +11,6 @@ The following diagram represents the FIM new flow High Level Architecture.
 
 ![High Level Architecture](docs/media/productchange.svg)
 
-![High Level Architecture](docs/media/productchange.png)
+![Diagrama Novo](docs/media/marketChange.svg)
 
 

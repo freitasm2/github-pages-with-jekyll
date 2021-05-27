@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     name: plantuml
     steps:
-      - name: Install Graphviz Dependency
-        uses: ts-graphviz/setup-graphviz@v1
-
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:

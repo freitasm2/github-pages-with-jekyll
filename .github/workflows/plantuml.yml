@@ -21,8 +21,8 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-        path: plantuml.jar
-        key: ${{ runner.os }}-${{ hashFiles('plantuml.jar') }}
+           path: plantuml.jar
+           key: ${{ runner.os }}-${{ hashFiles('plantuml.jar') }}
       - run: wget -N --no-verbose https://downloads.sourceforge.net/project/plantuml/plantuml.jar
 
       - name: Process Diagrams

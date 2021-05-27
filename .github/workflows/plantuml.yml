@@ -28,6 +28,11 @@ jobs:
       - name: Process Diagrams
         run: java -jar plantuml.jar -v -tsvg -r -o "${{github.workspace}}/docs/media/$" "docs/src/**.puml"
 
+      - name: Move Diagrams
+        run: |
+          mv -f docs/media/docs/src/* docs/media
+          rm -rf docs/media/docs
+
       - name: Initialize mandatory git config
         run: |
           git config user.name "escojar"

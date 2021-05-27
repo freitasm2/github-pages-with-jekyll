@@ -1,7 +1,7 @@
 @startuml
 skinparam backgroundColor white
 
-title Product Change Flow Class Diagram
+title Product Change FINAL Flow Class Diagram
 
 class ProductChangeListener{
 validatorEngine: ValidatorEngine

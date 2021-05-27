@@ -26,7 +26,7 @@ jobs:
       - run: wget -N --no-verbose https://downloads.sourceforge.net/project/plantuml/plantuml.jar
 
       - name: Process Diagrams
-        run: java -jar plantuml.jar -v -tsvg -r -o "${{github.workspace}}/docs/media" "docs/src/**.puml"
+        run: java -jar plantuml.jar -v -tsvg -r -o "${{github.workspace}}/docs/media/$" "docs/src/**.puml"
 
       - name: Initialize mandatory git config
         run: |

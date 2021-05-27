@@ -1,4 +1,5 @@
 @startuml
+skinparam backgroundColor white
 
 title Product Change Flow Class Diagram
 
